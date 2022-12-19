@@ -1,4 +1,5 @@
 ﻿using OOPs_Concepts.Abstraction;
+using OOPs_Concepts.Encapsulation;
 using OOPs_Concepts.Inheritance;
 using OOPs_Concepts.Polymorphism;
 
@@ -9,7 +10,7 @@ namespace OOPs_Concepts
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to OOPs Concepts!");
-            Console.WriteLine("Choose Option : \n1. Inheritance \n2. Abstraction \n3.Polymorphism - Method Ovreriding \n4. Polymorphism - Method Overloading");
+            Console.WriteLine("Choose Option : \n1. Inheritance \n2. Abstraction \n3.Polymorphism - Method Ovreriding \n4. Polymorphism - Method Overloading \n5. Encapsulation\n");
             int option =Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -43,6 +44,17 @@ namespace OOPs_Concepts
                     Console.WriteLine("Sum: " + addition.Add(2, 3));
                     Console.WriteLine("Sum: " + addition.Add(3, 5, 6));
                     Console.WriteLine("Sum: " + addition.Add(9, 3.12f, 32));
+                    break;
+
+                case 5: //Encapsulation
+                    Account account = new Account();
+                    Console.WriteLine("before usename:" + account.Name);
+                    account.Name = "abcd";
+                    Console.WriteLine("after username:" + account.Name);
+                    Console.WriteLine("before password:" + account.Pwd);
+                    account.Pwd = "Abc@123";
+                    Console.WriteLine("after password:" + account.Pwd);
+                    
                     break;
 
                 default:
